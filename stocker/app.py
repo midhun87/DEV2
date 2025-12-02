@@ -12,7 +12,9 @@ app.secret_key = "stocker_secret_2024"
 
 # AWS Configuration
 # REPLACE 'YOUR_ACCESS_KEY_ID' and 'YOUR_SECRET_ACCESS_KEY' with your actual keys
-
+AWS_ACCESS_KEY = 'AKIA6BKVS6KWIE7WLONG'
+AWS_SECRET_KEY = 'LCKZnNDDrUKbyvv60plyPseoer/Z+SsRxVQmchCl'
+AWS_REGION = 'ap-south-1'
 
 # Set up boto3 session with explicit credentials
 boto3_session = boto3.Session(
@@ -757,4 +759,5 @@ def logout():
     return redirect(url_for('index'))
 
 if __name__ == '__main__':
+
     app.run(debug=True, host='0.0.0.0', port = 5000)
